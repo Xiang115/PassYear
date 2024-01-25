@@ -58,7 +58,9 @@ public class DayOfTheWeek {
                     m = 14;
                 }
             }
-            int h = (int) ((q + Math.floor((13 * (m + 1)) / 5) + y % 100 + Math.floor((y % 100) / 4) + Math.floor((y / 100) / 4) + 5 * (y / 100)) % 7);
+            int j = y/100;
+            int k = y%100;
+            int h = (int) ((q + Math.floor((13 * (m + 1)) / 5) + k + Math.floor(k / 4) + Math.floor(j / 4) + 5 * j) % 7);
             return String.format("%d/%d/%d is on %s", q, OriM, OriY, DayWeek[h]);
         } else {
             return String.format("%d/%d/%d is invalid input", q, m, y);
