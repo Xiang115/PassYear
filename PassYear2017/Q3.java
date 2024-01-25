@@ -51,7 +51,7 @@ public class Q3 {
     
     public static void Approximation(int[] num){
         for(int i=0;i<num.length;i++){
-            if(num[i]%100<=50){
+            if(num[i]%100<50){
                 System.out.print(num[i]/100*100+" ");
             }else{
                 System.out.print(((num[i]/100)+1)*100+" ");
