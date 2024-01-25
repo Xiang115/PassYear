@@ -15,13 +15,13 @@ public class Q3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random r = new Random();
-        final int MAX = 9999;
+        final int MAX = 10001;
         System.out.print("Enter the number of random integer: ");
         int size = sc.nextInt();
         int[] num = new int[size];
         
         for(int i=0;i<size;i++){
-            num[i] = r.nextInt(MAX)+1;
+            num[i] = r.nextInt(MAX);
         }
         
         System.out.print("The random integer : ");
