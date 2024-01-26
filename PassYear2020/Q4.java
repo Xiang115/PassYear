@@ -47,7 +47,7 @@ public class Q4 {
             for (int i = 0; i < records.length; i++) {
                 System.out.printf("\nRecord %d\n", i + 1);
                 for (int j = 0; j < records[i].length; j++) {
-                    System.out.println(records[i][j]);
+                    System.out.println("\t" + records[i][j]);
                 }
             }
 
