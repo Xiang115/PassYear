@@ -9,8 +9,8 @@ package passyear_2017_1;
  * @author Goh
  */
 public class Complex {
-    private int a; //real
-    private int b;   //imaginary
+    private double a; //real
+    private double b;   //imaginary
     
     public Complex(){
         this.a=0;
