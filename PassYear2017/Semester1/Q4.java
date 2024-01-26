@@ -13,20 +13,20 @@ import java.util.*;
 public class Q4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a, b, c, d;
+        double a, b, c, d;
         System.out.print("First complex number.");
         System.out.print("Enter a number for the real part: ");
-        a = sc.nextInt();
+        a = sc.nextDouble();
         System.out.print("First complex number.");
         System.out.print("Enter a number for the imaginary part: ");
-        b = sc.nextInt();
+        b = sc.nextDouble();
         Complex s1 = new Complex(a,b);
         System.out.print("Second complex number.");
         System.out.print("Enter a number for the real part: ");
-        c = sc.nextInt();
+        c = sc.nextDouble();
         System.out.print("Second complex number.");
         System.out.print("Enter a number for the imaginary part: ");
-        d = sc.nextInt();
+        d = sc.nextDouble();
         Complex s2 = new Complex(c,d);
         System.out.println("");
 
