@@ -31,7 +31,7 @@ public class Q4 {
         System.out.println("");
 
         System.out.printf("First complex number: %s\n",s1);
-        System.out.printf("Second complex number: %s\n",s1);
+        System.out.printf("Second complex number: %s\n",s2);
         System.out.print("Addition  of the two complex numbers: ");
         s1.addComplexNum(s2);
         System.out.print("Subtraction of the two complex numbers: ");
