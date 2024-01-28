@@ -19,7 +19,6 @@ public class Q3 {
         char choice = 'y';
         while(true){
             if(choice == 'n'){
-                System.out.println("Program ends.");
                 break;
             }
             int num1 = r.nextInt(MAX);
@@ -34,7 +33,9 @@ public class Q3 {
             
             System.out.print("Do you want to try another question (y/n)? : ");
             choice = sc.next().charAt(0);
+            System.out.println("");
         }
+        System.out.println("Program ends.");
     }
     public static boolean isTrue(int answer,int num1,int num2){
         return answer == (num1+num2);
