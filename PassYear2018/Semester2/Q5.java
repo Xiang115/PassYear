@@ -30,7 +30,7 @@ public class Q5 {
         
         int total = G + S + L +C;
         r1.setScore(total);
-        System.out.println("\nTotal score: " + total);
+        System.out.println("\nTotal score: " + r1.getScore());
         System.out.println("Essay grade: " + r1.getGrade());
     }
 }
