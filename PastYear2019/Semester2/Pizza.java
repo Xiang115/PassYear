@@ -15,6 +15,9 @@ public class Pizza {
     private int numOfBeefTopping;
     private int numOfChickenTopping;
 
+    public Pizza(){
+    }
+    
     public Pizza(String a, int b, int c, int d) {
         this.size = a;
         this.numOfCheeseTopping = b;
