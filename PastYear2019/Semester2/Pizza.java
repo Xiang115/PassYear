@@ -65,13 +65,11 @@ public class Pizza {
         }
     }
 
-    @Override
-    public String toString() {
-        return String.format("Pizza size: %s\n"
-                + "Number of cheese topping: %d\n"
-                + "Number of beef topping: %d\n"
-                + "Number of chicken topping: %d\n"
-                + "Cost of the pizza: %.2f\n", size, numOfCheeseTopping,
-                numOfBeefTopping, numOfChickenTopping,computeCost());
+    public void Display() {
+        System.out.println("Pizza size: " + size);
+        System.out.println("Number of Cheese Topping: " + numOfCheeseTopping);
+        System.out.println("Number of Beef Topping: " + numOfBeefTopping);
+        System.out.println("Number of Chicken Topping: " + numOfChickenTopping);
+        System.out.println("Cost: $ " + computeCost());
     }
 }
