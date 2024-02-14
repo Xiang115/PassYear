@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package PYQ2018_Q4;
+package PastYear2018.Semester1.WongEdition;
 import java.util.Scanner;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
