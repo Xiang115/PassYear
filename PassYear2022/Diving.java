@@ -2,64 +2,67 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package PYQ2022_Q2;
+package PassYear2022;
 
+import java.util.Arrays;
+
+/**
+ *
+ * @author Goh
+ */
 public class Diving {
+
     private String name;
     private String country;
-    private double[][] scores=new double[3][7];
-    private double[] difficulty=new double[3];
-    
-    public Diving(String name,String country,double[][] scores,double[] difficulty){
-        this.name=name;
-        this.country=country;
-        this.scores=scores;
-        this.difficulty=difficulty;
+    private double[][] score;
+    private double[] difficulty;
+
+    public Diving() {
+        this.name = null;
+        this.country = null;
+        this.score = new double[3][7];
+        this.difficulty = new double[3];
     }
     
-    protected String getName(){
-        return name;
+    public Diving(String a, String b, double[][] c, double[] d){
+        this.name = a;
+        this.country = b;
+        this.score = c;
+        this.difficulty = d;
     }
-    
-    protected String getCountry(){
-        return country;
+
+    public String getName() {
+        return this.name;
     }
-    
-    protected double FinalScore(){
-        double total=0;
-        for(int i=0;i<scores.length;i++){    
-            for(int pass=1;pass<scores[i].length;pass++){
-                for(int a=0;a<scores[i].length-1;a++){
-                    if(scores[i][a]>scores[i][a+1]){
-                        double temp=scores[i][a];
-                        scores[i][a]=scores[i][a+1];
-                        scores[i][a+1]=temp;
-                    }
-                }
-            }    
+
+    public String getCountry() {
+        return this.country;
+    }
+
+    public double getFinal() {
+        double[] sum = new double[3];
+        for (int attempt = 0; attempt < score.length; attempt++) {
+            Arrays.sort(score[attempt]);
+            for (int i = 2; i < score[attempt].length - 2; i++) {
+                sum[attempt] += score[attempt][i];
+            }
+            sum[attempt] *= difficulty[attempt];
         }
-        
-        for(int i=0;i<scores.length;i++){
-            double finals=0;
-            for(int j=2;j<scores[i].length-2;j++)
-                finals+=scores[i][j];
-            finals*=difficulty[i];
-            total+=finals;
-        }
+        double total = sum[0] + sum[1] + sum[2];
         return total;
     }
-    
+
     @Override
-    public String toString(){
-        String stats="";
-        for(int i=0;i<scores.length;i++){
-            stats+="Judges scores : ";
-            for(int j=0;j<scores[i].length;j++)
-                stats+=scores[i][j]+" ";
-            stats+="\nDifficulty rating : "+difficulty[i]+"\n";
+    public String toString() {
+        String str = "Diver : " + this.name + "(" + this.country + ")\n";
+        for (int attempt = 0; attempt < score.length; attempt++) {
+            str += "Judges Scores : ";
+            for(int i=0;i<score[attempt].length;i++){
+                str += score[attempt][i] + " ";
+            }
+            str += "\nDifficulty Rating : " + this.difficulty[attempt] +"\n"; 
         }
-        return String.format("Diver : %s (%s)\n"
-                +"%s"
-                +"Final score : %.1f", name,country,stats,FinalScore());
+        str += "Final Score : " + getFinal();
+        return str;
     }
 }

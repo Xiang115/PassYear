@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-package PastYear2023;
-
-public class Q1 {
-    
-}
-=======
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -35,4 +28,3 @@ public class Q1 {
         System.out.println("The sum of all integers: " + reverse.length());
     }
 }
->>>>>>> 65e2d4e65c48941356d686821f3f4a14088b389b

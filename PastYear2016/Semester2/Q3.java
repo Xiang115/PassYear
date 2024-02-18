@@ -10,37 +10,7 @@ package passyear_2016_2;
  */
 import java.util.*;
 
-public class Q3 {
-
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        System.out.print("Enter the number of line: ");
-//        int line = sc.nextInt();
-//        int size = line + (line - 1);
-//
-//        for (int i = 0; i < line; i++) {
-//            int y = line;
-//            int x = 2;
-//
-//            for (int j = size / 2 - i; j > 0; j--) {
-//                System.out.print(" ");
-//                y--;
-//            }
-//            while (y > 0) {
-//                System.out.print(y);
-//                y--;
-//            }
-//
-//            if (i > 0) {
-//                for(int z=0;z<i;z++){
-//                    System.out.print(x);
-//                    x++;
-//                }
-//            }
-//            System.out.println("");
-//        }
-//    }
-    
+public class Q3 {  
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of line: ");

@@ -1,71 +1,72 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package PYQ2022_Q1;
+package PassYear2022;
+
+/**
+ *
+ * @author Goh
+ */
 import java.util.Random;
+
 public class Q1 {
+
     public static void main(String[] args) {
-        getPriceValues();
-        getEvenNumberYears();
-        getCarPlate();
-        getRandomWord();
+        Random r = new Random();
+        System.out.print("3 random price values: ");
+        RandomPrice(r);
+        System.out.print("5 random even-numbered years: ");
+        RandomEvenYear(r);
+        System.out.print("Car Plate Number: ");
+        RandomCarPlate(r);
+        System.out.print("Random Word : ");
+        RandomWord(r);
     }
-    
-    public static void getPriceValues(){
-        Random r=new Random();
-        System.out.print("3 random price values : ");
-        double price=0;
-        for(int i=0;i<3;i++){
-            price=r.nextInt(201)+100;
-            price+=r.nextDouble();
-            System.out.printf("%.2f ",price);
+
+    public static void RandomPrice(Random r) {
+        final double MAX = 300;
+        final double MIN = 100;
+        double[] Prices = new double[3];
+        for (int i = 0; i < Prices.length; i++) {
+            Prices[i] = r.nextDouble(MAX - MIN + 1) + MIN;
+            System.out.printf("%.2f ", Prices[i]);
         }
-        System.out.println();
+        System.out.println("");
     }
-    
-    public static void getEvenNumberYears(){
-        Random r=new Random();
-        System.out.print("5 random even-numbered years : ");
-        int years=0;
-        for(int i=0;i<5;i++){
-            years=r.nextInt(41)+1990;
-            if(years%2==1){
-                years+=1;
+
+    public static void RandomEvenYear(Random r) {
+        final int MAX = 2030;
+        final int MIN = 1990;
+        int[] years = new int[5];
+        for (int i = 0; i < years.length; i++) {
+            years[i] = r.nextInt(MAX - MIN + 1) + MIN;
+            if(years[i]%2==1){
+                years[i]++;
             }
-            System.out.print(years+" ");
+            System.out.printf("%d ",years[i]);
         }
-        System.out.println();
+        System.out.println("");
     }
     
-    public static void getCarPlate(){
-        Random r=new Random();
-        String carplate="";
-        for(int i=0;i<5;i++){
-            int num=r.nextInt(10);
-            carplate+=Integer.toString(num);
+    public static void RandomCarPlate(Random r){
+        String plate = "";
+        int num = r.nextInt(99999-10000+1)+10000;
+        plate += num;
+        final int max = 26;
+        for(int i=0;i<2;i++){
+            plate += (char)(r.nextInt(max)+'A');
         }
-        for(int j=0;j<2;j++){
-            char letter=(char)('A'+r.nextInt(26));
-            carplate+=letter;
-        }
-        System.out.println("Car Plate Number : "+carplate);
+        System.out.print(plate + "\n");
     }
     
-    public static void getRandomWord(){
-        Random r=new Random();
-        String word="";
+    public static void RandomWord(Random r){
+        String word = "";
+        final int max = 26;
+        char[] letter = {'a','A'};
         for(int i=0;i<8;i++){
-            int choices=r.nextInt(2);
-            if(choices==0){
-                char letter=(char)('A'+r.nextInt(26));
-                word+=letter;
-            }
-            else{
-                char letter=(char)('a'+r.nextInt(26));
-                word+=letter;
-            }
+            word += (char)(r.nextInt(max)+ letter[r.nextInt(2)]);
         }
-        System.out.println("Random Word : "+word);
+        System.out.print(word + "\n");
     }
 }

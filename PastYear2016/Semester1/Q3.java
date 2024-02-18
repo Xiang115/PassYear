@@ -28,6 +28,7 @@ public class Q3 {
         RoundOff(num);
         Inverse(num);
     }
+    
     public static void Display(int[] a){
         System.out.print("The random integer : ");
         for(int i=0;i<a.length;i++){
